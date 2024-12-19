@@ -30,10 +30,16 @@ const todosApp = {
                 alert("O texto da tarefa e obrigatoria");
             }
         },
+        storeTodos(){
+            localStorage.setItem("todos", JSON.stringify(this.todos));
+        }
     },
     created() {
        this.todos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : this.todos;
     },
+    updated(){
+        // localStorage.setItem("todos", JSON.stringify(this.todos));
+    }
 };
 
 Vue.createApp(todosApp).mount("#app");
