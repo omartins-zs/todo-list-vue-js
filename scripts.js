@@ -31,14 +31,8 @@ const todosApp = {
             }
         },
     },
-    beforeCreate() {
-        console.log("Before creted");
-    },
     created() {
-        console.log("Created");
-    },
-    beforeUpdate() {
-        console.log("Before Updated");
+       this.todos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : this.todos;
     },
 };
 
