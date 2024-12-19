@@ -31,6 +31,15 @@ const todosApp = {
             }
         },
     },
+    beforeCreate() {
+        console.log("Before creted");
+    },
+    created() {
+        console.log("Created");
+    },
+    beforeUpdate() {
+        console.log("Before Updated");
+    },
 };
 
 Vue.createApp(todosApp).mount("#app");
