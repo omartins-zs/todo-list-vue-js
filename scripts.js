@@ -25,6 +25,7 @@ const todosApp = {
                 this.newTodo = {
                     done: false,
                 };
+                localStorage.setItem("todos", this.todos)
             } else {
                 alert("O texto da tarefa e obrigatoria");
             }
